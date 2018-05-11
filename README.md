@@ -1,1 +1,5 @@
-# mission_to_mars
+# Mission to Mars
+
+The premise of this project was to build a web application that scrapes several websites for data related to the mission to Mars and display the information in a single HTML page.  In order to build this web application, I was tasked with:  
+1. **Scraping Data:** Using Jupyter Notebook (along with BeautifulSoup, Pandas, and Requests/Splinter), I scraped the NASA Mars News site and collected the latest news title and paragraph text, scraped the featured image url from the JPL Mars Image site, scraped the latest Mars weather tweet from the Mars Weather Twitter page, and scraped the images urls of Mars hemispheres from the USGS Astrogeology site.  
+2. **MongoDB and Flask Application:** Using MongoDB and Flask templating, I created a HTML page that displays all of the information that was scraped.  In order achieve this part of the project, I converted my Jupyter notebook into a Python script with a function that executes all the scraping and returns it to one Python dictionary containing all the scraped data. Next, I created a route (called /scrape) that imports the Python scraping script and will return values in Mongo as a Python dictionary.  Finally, I created a root route that queries the Mongo database and passes the Mars data into an HTML template to display.
